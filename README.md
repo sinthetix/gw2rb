@@ -1,5 +1,5 @@
 # GW2.rb
-
+[![Travis CI Status](https://travis-ci.org/sinthetix/gw2rb.svg?branch=master)](https://travis-ci.org/sinthetix/gw2rb)
 GW2.rb is a Ruby gem that wraps the GW2 API in a Ruby-flavored way. It is currently under development and is not ready for production yet.
 
 ## Table of Contents
