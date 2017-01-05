@@ -1,0 +1,178 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.guildwars2.com/v2/achievements/categories
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.10.0
+      Content-Type:
+      - application/json; charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - public,max-age=300
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Language:
+      - en
+      Expires:
+      - Wed, 04 Jan 2017 22:15:59 GMT
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Quaggans
+      X-Result-Total:
+      - '113'
+      X-Result-Count:
+      - '113'
+      Access-Control-Expose-Headers:
+      - X-Result-Total,X-Result-Count
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Powered-By:
+      - ARR/2.5
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Date:
+      - Wed, 04 Jan 2017 22:10:59 GMT
+      Content-Length:
+      - '250'
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          10,
+          11,
+          13,
+          14,
+          16,
+          22,
+          23,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          80,
+          81,
+          82,
+          83,
+          88,
+          97,
+          99,
+          100,
+          101,
+          102,
+          104,
+          108,
+          109,
+          110,
+          111,
+          112,
+          114,
+          116,
+          117,
+          118,
+          119,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          136,
+          137,
+          138,
+          139,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150
+        ]
+    http_version: 
+  recorded_at: Wed, 04 Jan 2017 22:12:13 GMT
+recorded_with: VCR 3.0.3

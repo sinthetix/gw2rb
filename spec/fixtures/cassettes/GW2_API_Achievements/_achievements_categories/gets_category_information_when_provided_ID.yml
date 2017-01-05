@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.guildwars2.com/v2/achievements/categories/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.10.0
+      Content-Type:
+      - application/json; charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - public,max-age=300
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Language:
+      - en
+      Expires:
+      - Wed, 04 Jan 2017 22:15:59 GMT
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Quaggans
+      X-Result-Total:
+      - '113'
+      Access-Control-Expose-Headers:
+      - X-Result-Total
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Powered-By:
+      - ARR/2.5
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Date:
+      - Wed, 04 Jan 2017 22:10:59 GMT
+      Content-Length:
+      - '262'
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": 1,
+          "name": "Slayer",
+          "description": "",
+          "order": 10,
+          "icon": "https://render.guildwars2.com/file/E00460A2CAD85D47406EAB4213D1010B3E80C9B0/42675.png",
+          "achievements": [
+            1,
+            5,
+            4,
+            6,
+            7,
+            8,
+            16,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            31,
+            33,
+            32,
+            34,
+            35,
+            30,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            3,
+            49,
+            50,
+            51,
+            52,
+            53
+          ]
+        }
+    http_version: 
+  recorded_at: Wed, 04 Jan 2017 22:12:14 GMT
+recorded_with: VCR 3.0.3

@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.guildwars2.com/v2/achievements/groups?ids=647D3B02-2302-41F0-88A3-6D88BB6F55CF,A4ED8379-5B6B-4ECC-B6E1-70C350C902D2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.10.0
+      Content-Type:
+      - application/json; charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - public,max-age=300
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Language:
+      - en
+      Expires:
+      - Wed, 04 Jan 2017 22:16:00 GMT
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Quaggans
+      X-Result-Total:
+      - '10'
+      X-Result-Count:
+      - '2'
+      Access-Control-Expose-Headers:
+      - X-Result-Total,X-Result-Count
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Powered-By:
+      - ARR/2.5
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Date:
+      - Wed, 04 Jan 2017 22:11:00 GMT
+      Content-Length:
+      - '293'
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "id": "647D3B02-2302-41F0-88A3-6D88BB6F55CF",
+            "name": "Festivals",
+            "description": "Achievements related to the current Living World update.",
+            "order": 4,
+            "categories": [
+              150
+            ]
+          },
+          {
+            "id": "A4ED8379-5B6B-4ECC-B6E1-70C350C902D2",
+            "name": "Story Journal",
+            "description": "Achievements related to the story journal.",
+            "order": 2,
+            "categories": [
+              147,
+              144,
+              121,
+              122,
+              123,
+              104,
+              68,
+              100,
+              81,
+              83,
+              82,
+              71,
+              72,
+              70,
+              139
+            ]
+          }
+        ]
+    http_version: 
+  recorded_at: Wed, 04 Jan 2017 22:12:15 GMT
+recorded_with: VCR 3.0.3
