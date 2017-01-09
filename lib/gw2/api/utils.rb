@@ -12,6 +12,17 @@ module GW2
         end
       end
 
+      def symbolize_keys(response)
+        case response
+        when Hash
+          Hash[response.map { |k,v| [k.to_sym, symbolize_keys(v)]}]
+        when Array
+          response.map { |v| symbolize_keys(v) }
+        else
+          response
+        end
+      end
+
       private
 
       def parse_string(id)

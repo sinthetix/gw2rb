@@ -20,4 +20,14 @@ describe GW2::API::Utils do
       expect(subject.format_id(["1", "2", "3"])).to eq("?ids=1,2,3")
     end
   end
+  
+  describe "symbolize_keys" do
+    it 'converts key strings to key symbols' do
+      expect(subject.symbolize_keys({"a"=>"b", "c"=>"d"})).to eq({:a=> "b", :c=> "d"})
+    end
+
+    it 'converts key strings to key symbols when nested in arrays' do
+      expect(subject.symbolize_keys([{"a"=>:b, "c"=>:d}])).to eq([{a: :b, c: :d}])
+    end
+  end
 end

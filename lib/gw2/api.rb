@@ -1,11 +1,13 @@
 require "gw2/api/achievements"
 require "gw2/api/dailies"
+require "gw2/api/professions"
 require "gw2/api/utils"
 
 module GW2
   class API
     include GW2::API::Achievements
     include GW2::API::Dailies
+    include GW2::API::Professions
     include GW2::API::Utils
 
     attr_reader :api_key
@@ -16,12 +18,15 @@ module GW2
 
     def get_response(endpoint)
       response = get(endpoint)
-      if response.status == 200
-        JSON.parse(response.body)
-      elsif response.status == 403 && authenticated?
-        raise "403 Error: Authorization failed. Verify the API key has correct access."
-      elsif response.status == 403
-        raise "403 Error: Please initialize the GW2 client with a proper API key."
+      case response.status
+      when 200
+        Utils.symbolize_keys(JSON.parse(response.body))
+      when 403
+        if authenticated?
+          raise "403 Error: Authorization failed. Verify the API key has correct access."
+        else
+          raise "403 Error: Please initialize the GW2 client with a proper API key."
+       end
       else
         raise "GW2 API returned a #{response.status} error."
       end
