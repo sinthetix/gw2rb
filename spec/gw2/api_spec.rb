@@ -7,9 +7,6 @@ describe GW2::API do
     describe "get" do
       let(:response){ subject.send(:get, "/v2/account/characters") }
 
-      # TODO: it "has the content-type and authorization headers" do
-      # end
-
       it "gets a response" do
         WebMock.stub_request(:get, "https://api.guildwars2.com/v2/account/characters").
           to_return(:status => 200, :body => '["Zojja","Caithe"]')
@@ -62,6 +59,7 @@ describe GW2::API do
 
   context "initialized without an API key" do
     subject { GW2::API.new }
+
     describe "initialize" do
       it "can be initialized without an API key" do
         expect(subject).to be_kind_of GW2::API
@@ -76,9 +74,6 @@ describe GW2::API do
 
     describe "get" do
       let(:response){ subject.send(:get, "/v2/achievements") }
-
-      # TODO: it "has only the content-type headers" do
-      # end
 
       it "gets a response with a status and body" do
         WebMock.stub_request(:get, "https://api.guildwars2.com/v2/achievements").
