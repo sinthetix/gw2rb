@@ -1,5 +1,6 @@
 # GW2.rb
 [![Travis CI Status](https://travis-ci.org/sinthetix/gw2rb.svg?branch=master)](https://travis-ci.org/sinthetix/gw2rb)
+
 GW2.rb is a Ruby gem that wraps the GW2 API in a Ruby-flavored way. It is currently under development and is not ready for production yet.
 
 ## Table of Contents
@@ -7,13 +8,16 @@ GW2.rb is a Ruby gem that wraps the GW2 API in a Ruby-flavored way. It is curren
 * [Installation](#installation)
 * [Usage](#usage)
   * [Standard Methods](#standard-methods)
+    * [Achievements](#achievements)
+    * [Dailies](#dailies)
+    * [Professions](#professions)
   * [Authenticated Methods](#authenticated-methods)
 * [Development](#development)
 * [Contributing](#contributing)
 * [License](#license)
 
-## Installation
-
+## Future Installation
+_Please not this is not hosted on RubyGems yet!_
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -45,11 +49,12 @@ Methods return arrays or hashes with JSON-formatted key/value pairs.
 
 The following methods can all be called without an API key.
 
-#### #all_achievements
+#### Achievements
+##### #all_achievements
 
 Returns an array of all achievement IDs.
 
-#### #achievements_info(id)
+##### #achievements_info(id)
 
 Returns a hash of information for the achievement IDs specified with the keys: `:id`, `:name`, `:description`, `:requirement`, `:locked_text`, `:type`, `:flags`, and `:tiers`.
 
@@ -64,7 +69,7 @@ achievement[:name]
 # returns "Centaur Slayer"
 ```
 
-#### #achievements_categories(id)
+##### #achievements_categories(id)
 
 Returns an array of all achievement categories when not passed an ID.
 
@@ -81,7 +86,7 @@ category[:name]
 # Returns "Slayer"
 ```
 
-#### #achievements_groups(optional_id)
+##### #achievements_groups(optional_id)
 
 Returns an array of all achievement groups when not passed an ID.
 
@@ -93,14 +98,13 @@ The optional `id` parameter takes:
 * an Array of IDs => `achievements_categories(["45410F60-AB66-4146-A0F7-CE99250C4CB0",
   "A4ED8379-5B6B-4ECC-B6E1-70C350C902D2"])`
 
-
 ```ruby
 group = @client.achievement_groups("56A82BB9-6B07-4AB0-89EE-E4A6D68F5C47")
 group[:name]
 # Returns "General"
 ```
-
-#### #dailies
+#### Dailies
+##### #dailies
 
 Returns a hash of information for today's daily achievements with the keys: `:pve`, `:pvp`, `:wvw`, and `:special`.
 
@@ -110,7 +114,7 @@ dailies[:pve]
 # Returns an Array of Hashes where each item (Hash) in the array represents a daily pve achievement
 ```
 
-#### #dailies_tomorrow
+##### #dailies_tomorrow
 
 Returns a hash of information for tomorrow's daily achievements with the keys: `:pve`, `:pvp`, `:wvw`, and `:special`.
 
@@ -119,6 +123,24 @@ dailies_tomorrow = @client.dailies_tomorrow
 dailies_tomorrow[:wvw]
 # Returns an Array of Hashes where each item (Hash) in the array represents a daily wvw achievement for tomorrow.
 ```
+
+#### Professions
+##### #all_professions
+Returns an array of all profession IDs.
+
+##### #professions_info
+Returns a hash of information for specified profession(s) with the keys: `:id`, `:name`, `:icon`, `:icon_big`, `:specializations`, `:weapons`, and `:training`.
+
+The required `id` parameter takes:
+* a String of ID(s)=>  `professions_info("Mesmer, Thief")` or `professions_info("Mesmer")`
+* an Array of IDs => `professions_info(["Mesmer", "Thief")`
+
+```ruby
+mesmer_info = @client.professions_info("Mesmer")
+mesmer_info[:weapons][:Focus][:skills]
+# Returns an Array of Hashes where each item (Hash) in the array represents a weapon skill
+```
+
 TODO: All other standard methods.
 
 ### Authenticated Methods
