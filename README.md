@@ -11,13 +11,14 @@ GW2.rb is a Ruby gem that wraps the GW2 API in a Ruby-flavored way. It is curren
     * [Achievements](#achievements)
     * [Dailies](#dailies)
     * [Professions](#professions)
+    * [Specializations](#specializations)
   * [Authenticated Methods](#authenticated-methods)
 * [Development](#development)
 * [Contributing](#contributing)
 * [License](#license)
 
-## Future Installation
-_Please not this is not hosted on RubyGems yet!_
+## Installation
+_Please note this is not hosted on RubyGems yet! This is merely placeholder information!_
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -141,6 +142,23 @@ mesmer_info[:weapons][:Focus][:skills]
 # Returns an Array of Hashes where each item (Hash) in the array represents a weapon skill
 ```
 
+#### Specializations
+##### #all_specializations
+Returns an array of all specialization IDs.
+
+##### #specializations_info
+Returns a hash of information for specified specialization(s) with the keys: `:id`, `:name`, `:profession`, `:elite`, `:icon`, `:background`, `:minor_traits`, and `:major_traits`.
+
+The optional `id` parameter takes:
+* an Integer => `specializations_info(1)`
+* a String of ID number(s) =>  `specializations_info("1,2,3")` or `specializations_info("1")`
+* an Array of ID numbers => `specializations_info([1,2,3])` or `specializations_info(["1", "2", "3"])`
+
+```ruby
+dueling_info = @client.specializations_info(1)
+dueling_info[:minor_traits]
+# Returns an Array of Integers where each item (Integer) in the array represents a trait ID which can be resolved using #traits_info
+```
 TODO: All other standard methods.
 
 ### Authenticated Methods

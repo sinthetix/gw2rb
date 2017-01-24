@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.guildwars2.com/v2/specializations?ids=1,2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.10.0
+      Content-Type:
+      - application/json; charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - public,max-age=300
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Language:
+      - en
+      Expires:
+      - Tue, 24 Jan 2017 19:47:00 GMT
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Quaggans
+      X-Result-Total:
+      - '54'
+      X-Result-Count:
+      - '2'
+      Access-Control-Expose-Headers:
+      - X-Result-Total,X-Result-Count
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Powered-By:
+      - ARR/2.5
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Date:
+      - Tue, 24 Jan 2017 19:42:00 GMT
+      Content-Length:
+      - '422'
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "id": 1,
+            "name": "Dueling",
+            "profession": "Mesmer",
+            "elite": false,
+            "minor_traits": [
+              706,
+              710,
+              707
+            ],
+            "major_traits": [
+              701,
+              705,
+              700,
+              1889,
+              1960,
+              708,
+              692,
+              1950,
+              704
+            ],
+            "icon": "https://render.guildwars2.com/file/43C5400906A104C60F30DFE0A145D1E767353573/1012003.png",
+            "background": "https://render.guildwars2.com/file/992D53319C5FCD4AE841C592DC2AE91D5906AECF/1012057.png"
+          },
+          {
+            "id": 2,
+            "name": "Death Magic",
+            "profession": "Necromancer",
+            "elite": false,
+            "minor_traits": [
+              856,
+              839,
+              1929
+            ],
+            "major_traits": [
+              820,
+              857,
+              1922,
+              858,
+              860,
+              855,
+              842,
+              1940,
+              1694
+            ],
+            "icon": "https://render.guildwars2.com/file/16663C1CDF532AB0DCC0CB08951DD2F49351D5D4/1012008.png",
+            "background": "https://render.guildwars2.com/file/B3F92D581B0A036CABB51590E6E560B21708391F/1012067.png"
+          }
+        ]
+    http_version: 
+  recorded_at: Tue, 24 Jan 2017 19:42:00 GMT
+recorded_with: VCR 3.0.3
