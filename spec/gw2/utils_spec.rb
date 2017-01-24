@@ -1,7 +1,7 @@
 require "spec_helper"
 
-describe GW2::API::Utils do
-  subject{GW2::API::Utils}
+describe GW2::Utils do
+  subject{GW2::Utils}
   describe "format_id" do
     it "does nothing with an unsupported or empty value" do
       expect(subject.format_id(nil)).to eq("")
@@ -20,7 +20,7 @@ describe GW2::API::Utils do
       expect(subject.format_id(["1", "2", "3"])).to eq("?ids=1,2,3")
     end
   end
-  
+
   describe "symbolize_keys" do
     it 'converts key strings to key symbols' do
       expect(subject.symbolize_keys({"a"=>"b", "c"=>"d"})).to eq({:a=> "b", :c=> "d"})

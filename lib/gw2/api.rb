@@ -1,14 +1,14 @@
 require "gw2/api/achievements"
 require "gw2/api/dailies"
 require "gw2/api/professions"
-require "gw2/api/utils"
+require "gw2/utils"
 
 module GW2
   class API
     include GW2::API::Achievements
     include GW2::API::Dailies
     include GW2::API::Professions
-    include GW2::API::Utils
+    include GW2::Utils
 
     attr_reader :api_key
 
