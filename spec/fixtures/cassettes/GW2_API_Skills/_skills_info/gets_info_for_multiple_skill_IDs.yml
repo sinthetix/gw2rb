@@ -1,0 +1,202 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.guildwars2.com/v2/skills?ids=5697,5487
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.10.0
+      Content-Type:
+      - application/json; charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - public,max-age=300
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Language:
+      - en
+      Expires:
+      - Tue, 24 Jan 2017 21:22:02 GMT
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Quaggans
+      X-Result-Total:
+      - '1348'
+      X-Result-Count:
+      - '2'
+      Access-Control-Expose-Headers:
+      - X-Result-Total,X-Result-Count
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Powered-By:
+      - ARR/2.5
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Date:
+      - Tue, 24 Jan 2017 21:17:02 GMT
+      Content-Length:
+      - '1117'
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "name": "Fiery Whirl",
+            "facts": [
+              {
+                "text": "Range",
+                "type": "Range",
+                "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+                "value": 900
+              },
+              {
+                "text": "Recharge",
+                "type": "Recharge",
+                "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+                "value": 5
+              },
+              {
+                "text": "Damage",
+                "type": "Damage",
+                "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+                "hit_count": 1,
+                "dmg_multiplier": 0.65
+              },
+              {
+                "text": "Apply Buff/Condition",
+                "type": "Buff",
+                "icon": "https://render.guildwars2.com/file/070325E519C178D502A8160523766070D30C0C19/102838.png",
+                "duration": 3,
+                "status": "Crippled",
+                "description": "Movement speed decreased by 50%; stacks duration.",
+                "apply_count": 1
+              },
+              {
+                "text": "Radius",
+                "type": "Distance",
+                "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+                "distance": 130
+              },
+              {
+                "text": "Number of Impacts",
+                "type": "Number",
+                "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+                "value": 8
+              },
+              {
+                "text": "Number of Targets",
+                "type": "Number",
+                "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+                "value": 3
+              },
+              {
+                "text": "Combo Finisher",
+                "type": "ComboFinisher",
+                "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+                "percent": 100,
+                "finisher_type": "Whirl"
+              }
+            ],
+            "description": "Advance forward, slashing foes in your way.",
+            "icon": "https://render.guildwars2.com/file/A0DF63425A55C89E3B96DA571F04B93CE16D7A35/103385.png",
+            "type": "Bundle",
+            "weapon_type": "None",
+            "professions": [
+              "Thief",
+              "Mesmer",
+              "Warrior",
+              "Elementalist",
+              "Necromancer",
+              "Guardian",
+              "Ranger",
+              "Engineer",
+              "Revenant"
+            ],
+            "slot": "Weapon_3",
+            "flags": [
+              "GroundTargeted"
+            ],
+            "id": 5697,
+            "chat_link": "[&BkEWAAA=]"
+          },
+          {
+            "name": "Frozen Burst",
+            "facts": [
+              {
+                "text": "Recharge",
+                "type": "Recharge",
+                "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+                "value": 12
+              },
+              {
+                "text": "Damage",
+                "type": "Damage",
+                "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+                "hit_count": 1,
+                "dmg_multiplier": 0.4
+              },
+              {
+                "text": "Apply Buff/Condition",
+                "type": "Buff",
+                "icon": "https://render.guildwars2.com/file/28C4EC547A3516AF0242E826772DA43A5EAC3DF3/102839.png",
+                "duration": 3,
+                "status": "Chilled",
+                "description": "Movement speed decreased by 66%; skill cooldown increased by 66%; stacks duration.",
+                "apply_count": 1
+              },
+              {
+                "text": "Radius",
+                "type": "Distance",
+                "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+                "distance": 240
+              },
+              {
+                "text": "Number of Targets",
+                "type": "Number",
+                "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+                "value": 5
+              },
+              {
+                "text": "Combo Finisher",
+                "type": "ComboFinisher",
+                "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+                "percent": 100,
+                "finisher_type": "Blast"
+              }
+            ],
+            "description": "Detonate a burst of ice that chills nearby foes.",
+            "icon": "https://render.guildwars2.com/file/C13AA7EC94200C0E7E24C4E47164183991107EA4/103243.png",
+            "type": "Weapon",
+            "weapon_type": "Dagger",
+            "attunement": "Water",
+            "professions": [
+              "Elementalist"
+            ],
+            "slot": "Weapon_3",
+            "flags": [],
+            "id": 5487,
+            "chat_link": "[&Bm8VAAA=]"
+          }
+        ]
+    http_version: 
+  recorded_at: Tue, 24 Jan 2017 21:17:03 GMT
+recorded_with: VCR 3.0.3

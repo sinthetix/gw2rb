@@ -11,6 +11,7 @@ GW2.rb is a Ruby gem that wraps the GW2 API in a Ruby-flavored way. It is curren
     * [Achievements](#achievements)
     * [Dailies](#dailies)
     * [Professions](#professions)
+    * [Skills](#skills)
     * [Specializations](#specializations)
   * [Authenticated Methods](#authenticated-methods)
 * [Development](#development)
@@ -140,6 +141,23 @@ The required `id` parameter takes:
 mesmer_info = @client.professions_info("Mesmer")
 mesmer_info[:weapons][:Focus][:skills]
 # Returns an Array of Hashes where each item (Hash) in the array represents a weapon skill
+```
+#### Skills
+##### #all_skills
+Returns an array of all skill IDs.
+
+##### #skills_info
+Returns a hash of information for specified skill(s) with the keys: `:id`, `:name`, `:icon`, `:chat_link`, `:type`, `:weapon_type`, `:professions`, `:slot`, as well as a large number of optional keys. For the complete list, see the [official API documentation for skills endpoint](https://wiki.guildwars2.com/wiki/API:2/skills#Response).
+
+The optional `id` parameter takes:
+* an Integer => `skills_info(1)`
+* a String of ID number(s) =>  `skills_info("1,2,3")` or `skills_info("1")`
+* an Array of ID numbers => `skills_info([1,2,3])` or `skills_info(["1", "2", "3"])`
+
+```ruby
+warrior_skill_info = @client.skill_info(14375)
+warrior_skill_info[:name]
+# Returns a String with the name of the skill e.g. "Arcing Slice"
 ```
 
 #### Specializations

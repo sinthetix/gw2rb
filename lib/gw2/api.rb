@@ -1,6 +1,7 @@
 require "gw2/api/achievements"
 require "gw2/api/dailies"
 require "gw2/api/professions"
+require "gw2/api/skills"
 require "gw2/api/specializations"
 require "gw2/utils"
 
@@ -9,6 +10,7 @@ module GW2
     include GW2::API::Achievements
     include GW2::API::Dailies
     include GW2::API::Professions
+    include GW2::API::Skills
     include GW2::API::Specializations
     include GW2::Utils
 
