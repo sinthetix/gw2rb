@@ -4,7 +4,6 @@
 GW2.rb is a Ruby gem that wraps the GW2 API in a Ruby-flavored way. It is currently under development and is not ready for production yet.
 
 ## Table of Contents
-
 * [Installation](#installation)
 * [Usage](#usage)
   * [Standard Methods](#standard-methods)
@@ -13,6 +12,7 @@ GW2.rb is a Ruby gem that wraps the GW2 API in a Ruby-flavored way. It is curren
     * [Professions](#professions)
     * [Skills](#skills)
     * [Specializations](#specializations)
+    * [Traits](#traits)
   * [Authenticated Methods](#authenticated-methods)
 * [Development](#development)
 * [Contributing](#contributing)
@@ -35,7 +35,6 @@ Or install it yourself as:
     $ gem install gw2rb
 
 ## Usage
-
 To initialize a client, you can call `GW2.client` with or without an API key:
 
 ```ruby
@@ -48,31 +47,27 @@ An API key is necessary to access many of the GW2 API endpoints and is highly re
 Methods return arrays or hashes with JSON-formatted key/value pairs.
 
 ### Standard Methods
-
 The following methods can all be called without an API key.
 
 #### Achievements
 ##### #all_achievements
-
 Returns an array of all achievement IDs.
 
-##### #achievements_info(id)
-
+##### #achievement_info(id)
 Returns a hash of information for the achievement IDs specified with the keys: `:id`, `:name`, `:description`, `:requirement`, `:locked_text`, `:type`, `:flags`, and `:tiers`.
 
 The required `id` parameter takes:
-* an Integer => `achievements_info(1)`
-* a String of ID number(s) =>  `achievements_info("1,2,3")` or `achievements_info("1")`
-* an Array of ID numbers => `achievements_info([1,2,3])` or `achievements_info(["1", "2", "3"])`
+* an Integer => `achievement_info(1)`
+* a String of ID number(s) =>  `achievement_info("1,2,3")` or `achievement_info("1")`
+* an Array of ID numbers => `achievement_info([1,2,3])` or `achievement_info(["1", "2", "3"])`
 
 ```ruby
-achievement = @client.achievements_info(1)
+achievement = @client.achievement_info(1)
 achievement[:name]
 # returns "Centaur Slayer"
 ```
 
-##### #achievements_categories(id)
-
+##### #achievement_categories(id)
 Returns an array of all achievement categories when not passed an ID.
 
 When an ID is provided, returns a hash of information for the achievement category ID with the keys: `:id`, `:name`, `:description`, `:order`, `:icon`, and `:achievements`.
@@ -83,13 +78,12 @@ The optional `id` parameter takes:
 * an Array of ID numbers => `achievements_categories([1,2,3])` or `achievements_categories(["1", "2", "3"])`
 
 ```ruby
-category = @client.achievements_categories(1)
+category = @client.achievement_categories(1)
 category[:name]
 # Returns "Slayer"
 ```
 
-##### #achievements_groups(optional_id)
-
+##### #achievement_groups(optional_id)
 Returns an array of all achievement groups when not passed an ID.
 
 When an ID is passed, returns a hash of information for the achievement category ID with the keys: `:id`, `:name`, `:description`, `:order`, and `:categories`.
@@ -105,95 +99,95 @@ group = @client.achievement_groups("56A82BB9-6B07-4AB0-89EE-E4A6D68F5C47")
 group[:name]
 # Returns "General"
 ```
+
 #### Dailies
 ##### #dailies
-
 Returns a hash of information for today's daily achievements with the keys: `:pve`, `:pvp`, `:wvw`, and `:special`.
 
 ```ruby
 dailies = @client.dailies
 dailies[:pve]
-# Returns an Array of Hashes where each item (Hash) in the array represents a daily pve achievement
+# Returns an array of hashes where each item (hash) in the array represents a daily pve achievement
 ```
 
 ##### #dailies_tomorrow
-
 Returns a hash of information for tomorrow's daily achievements with the keys: `:pve`, `:pvp`, `:wvw`, and `:special`.
 
 ```ruby
 dailies_tomorrow = @client.dailies_tomorrow
 dailies_tomorrow[:wvw]
-# Returns an Array of Hashes where each item (Hash) in the array represents a daily wvw achievement for tomorrow.
+# Returns an array of hashes where each item (hash) in the array represents a daily wvw achievement for tomorrow.
 ```
 
 #### Professions
 ##### #all_professions
-Returns an array of all profession IDs.
+Returns an array of all profession IDs (which are strings).
 
-##### #professions_info
+##### #profession_info
 Returns a hash of information for specified profession(s) with the keys: `:id`, `:name`, `:icon`, `:icon_big`, `:specializations`, `:weapons`, and `:training`.
 
 The required `id` parameter takes:
-* a String of ID(s)=>  `professions_info("Mesmer, Thief")` or `professions_info("Mesmer")`
-* an Array of IDs => `professions_info(["Mesmer", "Thief")`
+* a String of ID(s)=>  `profession_info("Mesmer, Thief")` or `profession_info("Mesmer")`
+* an Array of IDs => `profession_info(["Mesmer", "Thief")`
 
 ```ruby
-mesmer_info = @client.professions_info("Mesmer")
+mesmer_info = @client.profession_info("Mesmer")
 mesmer_info[:weapons][:Focus][:skills]
-# Returns an Array of Hashes where each item (Hash) in the array represents a weapon skill
+# Returns an array of hashes where each item (hash) in the array represents a weapon skill
 ```
+
 #### Skills
 ##### #all_skills
 Returns an array of all skill IDs.
 
-##### #skills_info
+##### #skill_info
 Returns a hash of information for specified skill(s) with the keys: `:id`, `:name`, `:icon`, `:chat_link`, `:type`, `:weapon_type`, `:professions`, `:slot`, as well as a large number of optional keys. For the complete list, see the [official API documentation for skills endpoint](https://wiki.guildwars2.com/wiki/API:2/skills#Response).
 
 The optional `id` parameter takes:
-* an Integer => `skills_info(1)`
-* a String of ID number(s) =>  `skills_info("1,2,3")` or `skills_info("1")`
-* an Array of ID numbers => `skills_info([1,2,3])` or `skills_info(["1", "2", "3"])`
+* an Integer => `skill_info(5490)`
+* a String of ID number(s) =>  `skill_info("5490,5491,5492")` or `skill_info("5490")`
+* an Array of ID numbers => `skill_info([5490,5491,5492])` or `skill_info(["5490", "5491", "5492"])`
 
 ```ruby
 warrior_skill_info = @client.skill_info(14375)
 warrior_skill_info[:name]
-# Returns a String with the name of the skill e.g. "Arcing Slice"
+# Returns a string with the name of the skill e.g. "Arcing Slice"
 ```
 
 #### Specializations
 ##### #all_specializations
 Returns an array of all specialization IDs.
 
-##### #specializations_info
+##### #specialization_info
 Returns a hash of information for specified specialization(s) with the keys: `:id`, `:name`, `:profession`, `:elite`, `:icon`, `:background`, `:minor_traits`, and `:major_traits`.
 
 The optional `id` parameter takes:
-* an Integer => `specializations_info(1)`
-* a String of ID number(s) =>  `specializations_info("1,2,3")` or `specializations_info("1")`
-* an Array of ID numbers => `specializations_info([1,2,3])` or `specializations_info(["1", "2", "3"])`
+* an Integer => `specialization_info(1)`
+* a String of ID number(s) =>  `specialization_info("1,2,3")` or `specialization_info("1")`
+* an Array of ID numbers => `specialization_info([1,2,3])` or `specialization_info(["1", "2", "3"])`
 
 ```ruby
-dueling_info = @client.specializations_info(1)
+dueling_info = @client.specialization_info(1)
 dueling_info[:minor_traits]
-# Returns an Array of Integers where each item (Integer) in the array represents a trait ID which can be resolved using #traits_info
+# Returns an array of integers where each item (integer) in the array represents a trait ID which can be resolved using #trait_info
 ```
 
 #### Traits
 ##### #all_traits
 Returns an array of all skill IDs.
 
-##### #traits_info
+##### #trait_info
 Returns a hash of information for specified skill(s) with the keys: `:id`, `:name`, `:icon`, `:description` `:specialization`, `:tier`, `:slot`, as well as optional `:facts`, `:traited_facts`, and `:skills`.
 
 The optional `id` parameter takes:
-* an Integer => `traits_info(1)`
-* a String of ID number(s) =>  `traits_info("1,2,3")` or `traits_info("1")`
-* an Array of ID numbers => `traits_info([1,2,3])` or `traits_info(["1", "2", "3"])`
+* an Integer => `trait_info(2058)`
+* a String of ID number(s) =>  `trait_info("2056,2057,2058")` or `traits_info("2058")`
+* an Array of ID numbers => `trait_info([2056,2057,2058])` or `traits_info(["2056", "2057", "2058"])`
 
 ```ruby
-lingering_light = @client.traits_info(2058)
+lingering_light = @client.trait_info(2058)
 lingering_light[:name]
-# Returns a String with the name of the trait e.g. "Lingering Light"
+# Returns a string with the name of the trait e.g. "Lingering Light"
 ```
 
 TODO: All other standard methods.

@@ -8,13 +8,13 @@ describe GW2::API::Traits do
     end
   end
 
-  describe ".traits_info", :vcr do
+  describe ".trait_info", :vcr do
     it "gets info for a single trait ID" do
-      expect(subject.traits_info(2058)[:name]).to eq("Lingering Light")
+      expect(subject.trait_info(2058)[:name]).to eq("Lingering Light")
     end
 
     it "gets info for multiple trait IDs" do
-      expect(subject.traits_info([2058,1987])[1][:name]).to eq("All's Well That Ends Well")
+      expect(subject.trait_info([2058,1987])[1][:name]).to eq("All's Well That Ends Well")
     end
   end
 end

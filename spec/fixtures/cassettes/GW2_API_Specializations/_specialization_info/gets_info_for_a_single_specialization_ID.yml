@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.guildwars2.com/v2/achievements/groups/647D3B02-2302-41F0-88A3-6D88BB6F55CF
+    uri: https://api.guildwars2.com/v2/specializations/1
     body:
       encoding: US-ASCII
       string: ''
@@ -27,13 +27,13 @@ http_interactions:
       Content-Language:
       - en
       Expires:
-      - Wed, 04 Jan 2017 22:16:00 GMT
+      - Wed, 25 Jan 2017 01:26:17 GMT
       Vary:
       - Accept-Encoding
       Server:
       - Quaggans
       X-Result-Total:
-      - '10'
+      - '54'
       Access-Control-Expose-Headers:
       - X-Result-Total
       X-Content-Type-Options:
@@ -50,21 +50,36 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Date:
-      - Wed, 04 Jan 2017 22:11:00 GMT
+      - Wed, 25 Jan 2017 01:21:17 GMT
       Content-Length:
-      - '175'
+      - '271'
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": "647D3B02-2302-41F0-88A3-6D88BB6F55CF",
-          "name": "Festivals",
-          "description": "Achievements related to the current Living World update.",
-          "order": 4,
-          "categories": [
-            150
-          ]
+          "id": 1,
+          "name": "Dueling",
+          "profession": "Mesmer",
+          "elite": false,
+          "minor_traits": [
+            706,
+            710,
+            707
+          ],
+          "major_traits": [
+            701,
+            705,
+            700,
+            1889,
+            1960,
+            708,
+            692,
+            1950,
+            704
+          ],
+          "icon": "https://render.guildwars2.com/file/43C5400906A104C60F30DFE0A145D1E767353573/1012003.png",
+          "background": "https://render.guildwars2.com/file/992D53319C5FCD4AE841C592DC2AE91D5906AECF/1012057.png"
         }
-    http_version:
-  recorded_at: Wed, 04 Jan 2017 22:12:14 GMT
+    http_version: 
+  recorded_at: Wed, 25 Jan 2017 01:21:17 GMT
 recorded_with: VCR 3.0.3

@@ -27,7 +27,7 @@ http_interactions:
       Content-Language:
       - en
       Expires:
-      - Mon, 09 Jan 2017 18:28:59 GMT
+      - Wed, 25 Jan 2017 01:28:01 GMT
       Vary:
       - Accept-Encoding
       Server:
@@ -52,7 +52,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Date:
-      - Mon, 09 Jan 2017 18:23:59 GMT
+      - Wed, 25 Jan 2017 01:23:00 GMT
       Content-Length:
       - '2904'
     body:
@@ -1684,5 +1684,5 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Mon, 09 Jan 2017 18:24:00 GMT
+  recorded_at: Wed, 25 Jan 2017 01:23:01 GMT
 recorded_with: VCR 3.0.3

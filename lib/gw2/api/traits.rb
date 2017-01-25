@@ -7,7 +7,7 @@ module GW2
       end
 
       # gets info for trait(s) by ID (integer)
-      def traits_info(id)
+      def trait_info(id)
         get_response("/v2/traits#{Utils.format_id(id)}")
       end
     end

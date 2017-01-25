@@ -8,13 +8,13 @@ describe GW2::API::Specializations do
     end
   end
 
-  describe ".specializations_info", :vcr do
+  describe ".specialization_info", :vcr do
     it "gets info for a single specialization ID" do
-      expect(subject.specializations_info(1)[:name]).to eq("Dueling")
+      expect(subject.specialization_info(1)[:name]).to eq("Dueling")
     end
 
     it "gets info for multiple specialization IDs" do
-      expect(subject.specializations_info([1,2])[1][:name]).to eq("Death Magic")
+      expect(subject.specialization_info([1,2])[1][:name]).to eq("Death Magic")
     end
   end
 end

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.guildwars2.com/v2/achievements/1
+    uri: https://api.guildwars2.com/v2/achievements/groups/647D3B02-2302-41F0-88A3-6D88BB6F55CF
     body:
       encoding: US-ASCII
       string: ''
@@ -27,13 +27,13 @@ http_interactions:
       Content-Language:
       - en
       Expires:
-      - Wed, 04 Jan 2017 22:15:59 GMT
+      - Wed, 25 Jan 2017 01:25:58 GMT
       Vary:
       - Accept-Encoding
       Server:
       - Quaggans
       X-Result-Total:
-      - '2746'
+      - '10'
       Access-Control-Expose-Headers:
       - X-Result-Total
       X-Content-Type-Options:
@@ -50,39 +50,21 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Date:
-      - Wed, 04 Jan 2017 22:10:58 GMT
+      - Wed, 25 Jan 2017 01:20:58 GMT
       Content-Length:
-      - '209'
+      - '175'
     body:
       encoding: ASCII-8BIT
       string: |-
         {
-          "id": 1,
-          "name": "Centaur Slayer",
-          "description": "A few more centaur herds are thinned out.",
-          "requirement": "Kill  centaurs.",
-          "locked_text": "",
-          "type": "Default",
-          "flags": [],
-          "tiers": [
-            {
-              "count": 10,
-              "points": 1
-            },
-            {
-              "count": 100,
-              "points": 5
-            },
-            {
-              "count": 500,
-              "points": 5
-            },
-            {
-              "count": 1000,
-              "points": 5
-            }
+          "id": "647D3B02-2302-41F0-88A3-6D88BB6F55CF",
+          "name": "Festivals",
+          "description": "Achievements related to the current Living World update.",
+          "order": 4,
+          "categories": [
+            151
           ]
         }
     http_version: 
-  recorded_at: Wed, 04 Jan 2017 22:12:13 GMT
+  recorded_at: Wed, 25 Jan 2017 01:20:59 GMT
 recorded_with: VCR 3.0.3

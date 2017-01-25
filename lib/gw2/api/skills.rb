@@ -7,7 +7,7 @@ module GW2
       end
 
       # gets info for specialization by ID (integer)
-      def skills_info(id)
+      def skill_info(id)
         get_response("/v2/skills#{Utils.format_id(id)}")
       end
     end

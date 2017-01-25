@@ -40,19 +40,19 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Date:
-      - Wed, 04 Jan 2017 22:15:33 GMT
+      - Wed, 25 Jan 2017 01:21:01 GMT
       Content-Length:
-      - '348'
+      - '315'
     body:
       encoding: ASCII-8BIT
       string: |-
         {
           "pve": [
             {
-              "id": 1969,
+              "id": 1970,
               "level": {
                 "min": 1,
-                "max": 79
+                "max": 80
               },
               "required_access": [
                 "GuildWars2",
@@ -60,27 +60,7 @@ http_interactions:
               ]
             },
             {
-              "id": 1969,
-              "level": {
-                "min": 80,
-                "max": 80
-              },
-              "required_access": [
-                "GuildWars2"
-              ]
-            },
-            {
-              "id": 2957,
-              "level": {
-                "min": 80,
-                "max": 80
-              },
-              "required_access": [
-                "HeartOfThorns"
-              ]
-            },
-            {
-              "id": 1939,
+              "id": 1938,
               "level": {
                 "min": 11,
                 "max": 80
@@ -91,9 +71,20 @@ http_interactions:
               ]
             },
             {
-              "id": 1940,
+              "id": 1951,
               "level": {
                 "min": 11,
+                "max": 69
+              },
+              "required_access": [
+                "GuildWars2",
+                "HeartOfThorns"
+              ]
+            },
+            {
+              "id": 1942,
+              "level": {
+                "min": 70,
                 "max": 80
               },
               "required_access": [
@@ -102,10 +93,10 @@ http_interactions:
               ]
             },
             {
-              "id": 2022,
+              "id": 1902,
               "level": {
                 "min": 31,
-                "max": 79
+                "max": 49
               },
               "required_access": [
                 "GuildWars2",
@@ -113,29 +104,20 @@ http_interactions:
               ]
             },
             {
-              "id": 2022,
+              "id": 1886,
               "level": {
-                "min": 80,
+                "min": 50,
                 "max": 80
               },
               "required_access": [
-                "GuildWars2"
-              ]
-            },
-            {
-              "id": 2969,
-              "level": {
-                "min": 80,
-                "max": 80
-              },
-              "required_access": [
+                "GuildWars2",
                 "HeartOfThorns"
               ]
             }
           ],
           "pvp": [
             {
-              "id": 2817,
+              "id": 1861,
               "level": {
                 "min": 1,
                 "max": 80
@@ -157,7 +139,7 @@ http_interactions:
               ]
             },
             {
-              "id": 2640,
+              "id": 2108,
               "level": {
                 "min": 11,
                 "max": 80
@@ -168,7 +150,7 @@ http_interactions:
               ]
             },
             {
-              "id": 2108,
+              "id": 2640,
               "level": {
                 "min": 31,
                 "max": 80
@@ -181,7 +163,7 @@ http_interactions:
           ],
           "wvw": [
             {
-              "id": 946,
+              "id": 1852,
               "level": {
                 "min": 1,
                 "max": 80
@@ -203,7 +185,7 @@ http_interactions:
               ]
             },
             {
-              "id": 1845,
+              "id": 1850,
               "level": {
                 "min": 11,
                 "max": 80
@@ -227,7 +209,7 @@ http_interactions:
           ],
           "special": [
             {
-              "id": 1265,
+              "id": 2079,
               "level": {
                 "min": 1,
                 "max": 80
@@ -238,7 +220,7 @@ http_interactions:
               ]
             },
             {
-              "id": 2789,
+              "id": 2081,
               "level": {
                 "min": 1,
                 "max": 80
@@ -249,7 +231,7 @@ http_interactions:
               ]
             },
             {
-              "id": 1266,
+              "id": 2080,
               "level": {
                 "min": 1,
                 "max": 80
@@ -260,29 +242,7 @@ http_interactions:
               ]
             },
             {
-              "id": 1262,
-              "level": {
-                "min": 1,
-                "max": 80
-              },
-              "required_access": [
-                "GuildWars2",
-                "HeartOfThorns"
-              ]
-            },
-            {
-              "id": 3245,
-              "level": {
-                "min": 1,
-                "max": 80
-              },
-              "required_access": [
-                "GuildWars2",
-                "HeartOfThorns"
-              ]
-            },
-            {
-              "id": 3263,
+              "id": 2082,
               "level": {
                 "min": 1,
                 "max": 80
@@ -295,5 +255,5 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Wed, 04 Jan 2017 22:16:47 GMT
+  recorded_at: Wed, 25 Jan 2017 01:21:02 GMT
 recorded_with: VCR 3.0.3

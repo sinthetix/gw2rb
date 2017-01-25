@@ -7,7 +7,7 @@ module GW2
       end
 
       # gets info for profession by ID (name)
-      def professions_info(id)
+      def profession_info(id)
         get_response("/v2/professions#{Utils.format_id(id)}")
       end
     end
