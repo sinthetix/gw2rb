@@ -177,6 +177,25 @@ dueling_info = @client.specializations_info(1)
 dueling_info[:minor_traits]
 # Returns an Array of Integers where each item (Integer) in the array represents a trait ID which can be resolved using #traits_info
 ```
+
+#### Traits
+##### #all_traits
+Returns an array of all skill IDs.
+
+##### #traits_info
+Returns a hash of information for specified skill(s) with the keys: `:id`, `:name`, `:icon`, `:description` `:specialization`, `:tier`, `:slot`, as well as optional `:facts`, `:traited_facts`, and `:skills`.
+
+The optional `id` parameter takes:
+* an Integer => `traits_info(1)`
+* a String of ID number(s) =>  `traits_info("1,2,3")` or `traits_info("1")`
+* an Array of ID numbers => `traits_info([1,2,3])` or `traits_info(["1", "2", "3"])`
+
+```ruby
+lingering_light = @client.traits_info(2058)
+lingering_light[:name]
+# Returns a String with the name of the trait e.g. "Lingering Light"
+```
+
 TODO: All other standard methods.
 
 ### Authenticated Methods

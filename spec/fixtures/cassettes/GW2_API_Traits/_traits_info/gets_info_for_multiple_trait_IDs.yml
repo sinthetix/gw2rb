@@ -1,0 +1,135 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.guildwars2.com/v2/traits?ids=2058,1987
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.10.0
+      Content-Type:
+      - application/json; charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - public,max-age=300
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Language:
+      - en
+      Expires:
+      - Wed, 25 Jan 2017 01:03:18 GMT
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Quaggans
+      X-Result-Total:
+      - '657'
+      X-Result-Count:
+      - '2'
+      Access-Control-Expose-Headers:
+      - X-Result-Total,X-Result-Count
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Powered-By:
+      - ARR/2.5
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Date:
+      - Wed, 25 Jan 2017 00:58:17 GMT
+      Content-Length:
+      - '832'
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "id": 2058,
+            "tier": 3,
+            "order": 1,
+            "name": "Lingering Light",
+            "description": "Healing an ally causes their next attack to heal them and blind their target.",
+            "slot": "Major",
+            "facts": [
+              {
+                "text": "Recharge",
+                "type": "Recharge",
+                "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+                "value": 12
+              },
+              {
+                "text": "Apply Buff/Condition",
+                "type": "Buff",
+                "icon": "https://render.guildwars2.com/file/01BBD8CADBC6E9BBED46A2D9026976316CA8EAD9/1128537.png",
+                "duration": 3,
+                "status": "Lingering Light",
+                "description": "Your next attack heals you and inflicts blind on your enemy.",
+                "apply_count": 1
+              },
+              {
+                "text": "Healing",
+                "type": "AttributeAdjust",
+                "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+                "value": 596,
+                "target": "Healing"
+              },
+              {
+                "text": "Apply Buff/Condition",
+                "type": "Buff",
+                "icon": "https://render.guildwars2.com/file/09770136BB76FD0DBE1CC4267DEED54774CB20F6/102837.png",
+                "duration": 4,
+                "status": "Blinded",
+                "description": "Next outgoing attack misses; stacks duration.",
+                "apply_count": 1
+              }
+            ],
+            "specialization": 5,
+            "icon": "https://render.guildwars2.com/file/01BBD8CADBC6E9BBED46A2D9026976316CA8EAD9/1128537.png"
+          },
+          {
+            "id": 1987,
+            "tier": 1,
+            "order": 2,
+            "name": "All's Well That Ends Well",
+            "description": "Wells grant alacrity to allies when they end.",
+            "slot": "Major",
+            "facts": [
+              {
+                "text": "Apply Buff/Condition",
+                "type": "Buff",
+                "icon": "https://render.guildwars2.com/file/D45DF139369DCB0B2443EE0AA40FB49730E4D109/1012834.png",
+                "duration": 2,
+                "status": "Alacrity",
+                "description": "Skills recharge faster.",
+                "apply_count": 1
+              },
+              {
+                "text": "Number of Allied Targets",
+                "type": "Number",
+                "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+                "value": 5
+              }
+            ],
+            "specialization": 40,
+            "icon": "https://render.guildwars2.com/file/46D30FCC070170B2F656C3D80005909CD8B0F3F4/1012476.png"
+          }
+        ]
+    http_version: 
+  recorded_at: Wed, 25 Jan 2017 00:58:18 GMT
+recorded_with: VCR 3.0.3

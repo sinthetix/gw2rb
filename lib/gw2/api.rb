@@ -3,6 +3,7 @@ require "gw2/api/dailies"
 require "gw2/api/professions"
 require "gw2/api/skills"
 require "gw2/api/specializations"
+require "gw2/api/traits"
 require "gw2/utils"
 
 module GW2
@@ -12,6 +13,7 @@ module GW2
     include GW2::API::Professions
     include GW2::API::Skills
     include GW2::API::Specializations
+    include GW2::API::Traits
     include GW2::Utils
 
     attr_reader :api_key
