@@ -74,9 +74,9 @@ Returns an array of all achievement categories when not passed an ID.
 When an ID is provided, returns a hash of information for the achievement category ID with the keys: `:id`, `:name`, `:description`, `:order`, `:icon`, and `:achievements`.
 
 The optional `id` parameter takes:
-* an Integer => `achievements_categories(1)`
-* a String of ID number(s) =>  `achievements_categories("1,2,3")` or `achievements_categories("1")`
-* an Array of ID numbers => `achievements_categories([1,2,3])` or `achievements_categories(["1", "2", "3"])`
+* an Integer => `achievement_categories(1)`
+* a String of ID number(s) =>  `achievement_categories("1,2,3")` or `achievement_categories("1")`
+* an Array of ID numbers => `achievement_categories([1,2,3])` or `achievement_categories(["1", "2", "3"])`
 
 ```ruby
 category = @client.achievement_categories(1)
@@ -90,9 +90,9 @@ Returns an array of all achievement groups when not passed an ID.
 When an ID is passed, returns a hash of information for the achievement category ID with the keys: `:id`, `:name`, `:description`, `:order`, and `:categories`.
 
 The optional `id` parameter takes:
-* a String of ID(s) =>  `achievements_categories('"45410F60-AB66-4146-A0F7-CE99250C4CB0",
-  "A4ED8379-5B6B-4ECC-B6E1-70C350C902D2"')` or `achievements_categories("A4ED8379-5B6B-4ECC-B6E1-70C350C902D2")`
-* an Array of IDs => `achievements_categories(["45410F60-AB66-4146-A0F7-CE99250C4CB0",
+* a String of ID(s) =>  `achievement_groups('"45410F60-AB66-4146-A0F7-CE99250C4CB0",
+  "A4ED8379-5B6B-4ECC-B6E1-70C350C902D2"')` or `achievement_groups("A4ED8379-5B6B-4ECC-B6E1-70C350C902D2")`
+* an Array of IDs => `achievement_groups(["45410F60-AB66-4146-A0F7-CE99250C4CB0",
   "A4ED8379-5B6B-4ECC-B6E1-70C350C902D2"])`
 
 ```ruby
@@ -128,7 +128,7 @@ Returns an array of all legend IDs.
 Returns a hash of information for specified profession(s) with the keys: `:id`, `:swap`, `:heal`, `:elite`, and `:utilities`.
 
 The optional `id` parameter takes:
-* a String of ID(s) =>  `legend_info("Legend2")` or `legend_info("Legend2, Legend4")`
+* a String of ID(s) => `legend_info("Legend2, Legend4")` or `legend_info("Legend2")`
 * an Array of IDs => `legend_info(["Legend2", "Legend4"])`
 
 ```ruby
@@ -146,7 +146,7 @@ Returns a hash of information for specified profession(s) with the keys: `:id`, 
 
 The required `id` parameter takes:
 * a String of ID(s)=>  `profession_info("Mesmer, Thief")` or `profession_info("Mesmer")`
-* an Array of IDs => `profession_info(["Mesmer", "Thief")`
+* an Array of IDs => `profession_info(["Mesmer", "Thief"])`
 
 ```ruby
 mesmer_info = @client.profession_info("Mesmer")
@@ -161,7 +161,7 @@ Returns an array of all skill IDs.
 ##### #skill_info
 Returns a hash of information for specified skill(s) with the keys: `:id`, `:name`, `:icon`, `:chat_link`, `:type`, `:weapon_type`, `:professions`, `:slot`, as well as a large number of optional keys. For the complete list, see the [official API documentation for skills endpoint](https://wiki.guildwars2.com/wiki/API:2/skills#Response).
 
-The optional `id` parameter takes:
+The required `id` parameter takes:
 * an Integer => `skill_info(5490)`
 * a String of ID number(s) =>  `skill_info("5490,5491,5492")` or `skill_info("5490")`
 * an Array of ID numbers => `skill_info([5490,5491,5492])` or `skill_info(["5490", "5491", "5492"])`
@@ -179,7 +179,7 @@ Returns an array of all specialization IDs.
 ##### #specialization_info
 Returns a hash of information for specified specialization(s) with the keys: `:id`, `:name`, `:profession`, `:elite`, `:icon`, `:background`, `:minor_traits`, and `:major_traits`.
 
-The optional `id` parameter takes:
+The required `id` parameter takes:
 * an Integer => `specialization_info(1)`
 * a String of ID number(s) =>  `specialization_info("1,2,3")` or `specialization_info("1")`
 * an Array of ID numbers => `specialization_info([1,2,3])` or `specialization_info(["1", "2", "3"])`
@@ -197,10 +197,10 @@ Returns an array of all skill IDs.
 ##### #trait_info
 Returns a hash of information for specified skill(s) with the keys: `:id`, `:name`, `:icon`, `:description` `:specialization`, `:tier`, `:slot`, as well as optional `:facts`, `:traited_facts`, and `:skills`.
 
-The optional `id` parameter takes:
+The required `id` parameter takes:
 * an Integer => `trait_info(2058)`
-* a String of ID number(s) =>  `trait_info("2056,2057,2058")` or `traits_info("2058")`
-* an Array of ID numbers => `trait_info([2056,2057,2058])` or `traits_info(["2056", "2057", "2058"])`
+* a String of ID number(s) =>  `trait_info("2056,2057,2058")` or `trait_info("2058")`
+* an Array of ID numbers => `trait_info([2056,2057,2058])` or `trait_info(["2056", "2057", "2058"])`
 
 ```ruby
 lingering_light = @client.trait_info(2058)
