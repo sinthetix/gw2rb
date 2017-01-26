@@ -3,7 +3,7 @@ require "spec_helper"
 describe GW2::API::Professions do
   subject{ GW2.client }
   describe ".all_professions", :vcr do
-    it "gets all achievement IDs" do
+    it "gets all profession IDs" do
       expect(subject.all_professions[8]).to be_a String
     end
   end
