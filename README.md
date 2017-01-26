@@ -9,6 +9,7 @@ GW2.rb is a Ruby gem that wraps the GW2 API in a Ruby-flavored way. It is curren
   * [Standard Methods](#standard-methods)
     * [Achievements](#achievements)
     * [Dailies](#dailies)
+    * [Legends](#legends)
     * [Professions](#professions)
     * [Skills](#skills)
     * [Specializations](#specializations)
@@ -117,6 +118,23 @@ Returns a hash of information for tomorrow's daily achievements with the keys: `
 dailies_tomorrow = @client.dailies_tomorrow
 dailies_tomorrow[:wvw]
 # Returns an array of hashes where each item (hash) in the array represents a daily wvw achievement for tomorrow.
+```
+
+#### Legends
+##### #all_legends
+Returns an array of all legend IDs.
+
+##### #legend_info(id)
+Returns a hash of information for specified profession(s) with the keys: `:id`, `:swap`, `:heal`, `:elite`, and `:utilities`.
+
+The optional `id` parameter takes:
+* a String of ID(s) =>  `legend_info("Legend2")` or `legend_info("Legend2, Legend4")`
+* an Array of IDs => `legend_info(["Legend2", "Legend4"])`
+
+```ruby
+legendary_assassin = @client.legend_info("Legend2")
+legendary_assassin[:elite]
+# Returns the skill ID (28406) to be resolved using #skill_info
 ```
 
 #### Professions

@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.guildwars2.com/v2/legends?ids=Legend2,Legend4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.10.0
+      Content-Type:
+      - application/json; charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - public,max-age=300
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Language:
+      - en
+      Expires:
+      - Thu, 26 Jan 2017 03:56:34 GMT
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Quaggans
+      X-Result-Total:
+      - '5'
+      X-Result-Count:
+      - '2'
+      Access-Control-Expose-Headers:
+      - X-Result-Total,X-Result-Count
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Powered-By:
+      - ARR/2.5
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Date:
+      - Thu, 26 Jan 2017 03:51:34 GMT
+      Content-Length:
+      - '164'
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "id": "Legend2",
+            "swap": 27659,
+            "heal": 26937,
+            "elite": 28406,
+            "utilities": [
+              29209,
+              28231,
+              27107
+            ]
+          },
+          {
+            "id": "Legend4",
+            "swap": 28376,
+            "heal": 28219,
+            "elite": 28287,
+            "utilities": [
+              27322,
+              27505,
+              27917
+            ]
+          }
+        ]
+    http_version: 
+  recorded_at: Thu, 26 Jan 2017 03:51:35 GMT
+recorded_with: VCR 3.0.3
